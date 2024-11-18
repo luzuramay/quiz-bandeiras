@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="quiz-container text-center">
+    <h1>Selecione a bandeira correta</h1>
+    <!-- Exibindo a imagem da bandeira -->
+    <img src="<%= flag.image %>" alt="Bandeira" class="img-fluid mb-3" style="max-height: 300px;">
+    
+    <!-- Formulário para o quiz -->
+    <form id="quizForm" action="/quiz/check" method="POST">
+      <!-- Gerando as opções dinamicamente -->
+      <% flag.options.forEach(option => { %>
+        <button type="submit" name="answer" value="<%= option %>" class="btn btn-outline-primary m-2 answer-btn">
+          <%= option %>
+        </button>
+      <% }) %>
+      <input type="hidden" name="correct" value="<%= flag.country %>">  <!-- Armazenando a resposta correta -->
+    </form>
+  </div>
+</body>
+</html>

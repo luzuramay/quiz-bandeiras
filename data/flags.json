@@ -1,0 +1,13 @@
+[
+    {
+      "country": "Brazil",
+      "image": "images/brazil-flag.webp",
+      "options": ["Brazil", "Argentina", "Chile", "Peru"]
+    },
+    {
+      "country": "Japan",
+      "image": "images/japan-flag.webp",
+      "options": ["Japan", "China", "Korea", "Thailand"]
+    }
+  ]
+  
